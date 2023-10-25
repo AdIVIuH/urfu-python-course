@@ -1,5 +1,5 @@
 {
-    "python.defaultInterpreterPath": "${workspaceFolder}/.venv-task1-project/bin/python3.11.5",
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python3.11.5",
     // Переопределяем путь к Python. Тут есть два интересных момента:
     //    1. используется переменная ${workspaceFolder} - она обозначает
     //       корневую папку проекта
