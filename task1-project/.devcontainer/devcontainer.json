@@ -31,10 +31,9 @@
         // Логичнее всего скопировать сюда информацию из общего файла настроек.
         "vscode": {
             "settings": {
-                "python.defaultInterpreterPath": "/usr/local/bin/python3.11.5",
+                "python.defaultInterpreterPath": "../.venv/bin/python",
                 "python.linting.enabled": true,
-                "sql-formatter.uppercase": true,
-                "python.linting.flake8Enabled": true
+                "sql-formatter.uppercase": true
             },
             "extensions": [
                 // тут мы задаем список расширений VS Code, которые хотим увидеть при разработке в контейнере.
@@ -53,8 +52,9 @@
                 "DotJoshJohnson.xml",
                 "redhat.vscode-yaml",
                 "njpwerner.autodocstring",
-                "ms-azuretools.vscode-docker"
-            ],
+                "ms-azuretools.vscode-docker",
+                "ms-vscode.makefile-tools"
+            ]
         }
     },
     "forwardPorts": [

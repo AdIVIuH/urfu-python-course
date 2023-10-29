@@ -1,10 +1,12 @@
 FROM python:3.11.5
 
-COPY app/requirements.txt .
+COPY pyproject.toml .
+COPY poetry.lock .
 
 RUN set -ex \
  && apt-get update -yqq \
- && ACCEPT_EULA=Y apt-get install --no-install-recommends -yqq \
+ && ACCEPT_EULA=Y \
+ && apt-get install --no-install-recommends -yqq \
       unixodbc-dev \
       libpq-dev \
       g++ \
@@ -13,5 +15,6 @@ RUN set -ex \
       freetds-dev \
       freetds-bin \
       tdsodbc \
- && pip3 install flake8 pylint autopep8 \
- && pip3 install -r requirements.txt
+ && curl https://pyenv.run | bash \
+ && pip3 install poetry
+RUN poetry install
